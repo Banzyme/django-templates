@@ -1,4 +1,5 @@
 version: '3'  
+
 services:  
   nginx:
     image: nginx:latest
@@ -18,5 +19,9 @@ services:
     volumes:
       - ./src:/src
       - ./src/static:/static
+    depends_on:
+      - db
     expose:
       - "5000"
+  db:
+    image: postgres
