@@ -76,8 +76,9 @@ WSGI_APPLICATION = 'twisted.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
+        'NAME': 'twisted',
+        'USER': 'endeesa',
+        'PASSWORD': 'nbanzymee',
         'HOST': 'db',
         'PORT': 5432,
     }
@@ -122,3 +123,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = ( os.path.join(BASE_DIR, 'app/static'), )
