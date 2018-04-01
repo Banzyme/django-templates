@@ -14,6 +14,7 @@ services:
       - web
   web:
     build: .
+    env_file: .env
     container_name: django_001
     command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py collectstatic --noinput && gunicorn twisted.wsgi -b 0.0.0.0:5000 --log-file -"
     volumes:

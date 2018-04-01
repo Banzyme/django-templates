@@ -17,7 +17,7 @@ def home_2(request):
 
 def home_3(request):
     app_name = 'app'
-    title = 'Twisted | Home page'
+    title = 'Twisted | Query form'
     context = {'title':title, 'app_name':app_name}
 
     return render(request, 'app/home_3.html', context)
